@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Sweet Memories ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Tehreem aka Temi</h1>
+    <div class="stats">
+      <div><h2>1 Year</h2><p>Survived Together</p></div>
+      <div><h2>∞</h2><p>Memories Made</p></div>
+      <div><h2>1</h2><p>Perfect Match</p></div>
+    </div>
+    <p>Our beautiful journey together, every moment with my amazing Temi ❤️</p>
+    <a href="#journey" class="btn">Explore Our Story</a>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="journey" class="timeline">
+    <h2>How We Survived Each Other</h2>
+    <div class="line"></div>
+    <div class="event left">
+      <img src="assets/images/meeting.png">
+      <div class="content"><h3>First Meeting</h3><span>Dec 1, 2024</span><p>That day changed everything...</p></div>
+    </div>
+    <div class="event right">
+      <img src="assets/images/date.png">
+      <div class="content"><h3>First Date</h3><span>Dec 18, 2024</span><p>Our first coffee ❤ , and btw i was so nervous</p></div>
+    </div>
+    <div class="event left">
+      <img src="assets/images/eid.png">
+      <div class="content"><h3>First Eid</h3><span>Mar 24, 2025</span><p>yup again these beautiful eyes 😚</p></div>
+    </div>
+     <div class="event right">
+      <img src="assets/images/regret.png">
+      <div class="content"><h3>No Regret Photo🙄</h3><span>Dec 18, 2024</span><p>We actually survived this year! through all my bad jokes 😅😊</p></div>
+    </div>
+    
+  </section>
+
+  <!-- CAPTURED MOMENTS -->
+  <!-- CAPTURED MOMENTS -->
+<section class="gallery">
+  <h2>Captured Moments</h2>
+  <div class="grid">
+
+    <figure>
+      <img src="assets/images/photo1.png" alt="First Photo">
+      <figcaption>cute ig🤔</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/images/photo2.png" alt="Sleepy Head">
+      <figcaption>Heavy fist bump😏</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/images/photo3.png" alt="Our Time">
+      <figcaption>these eyes again ❤️</figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/images/photo4.png" alt="Coffee Gossip">
+      <figcaption>U Sleepy head ☕</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+  <!-- LOVE NOTES -->
+  <section class="love-notes">
+    <h2>Little Things I Love About Temi</h2>
+    <div class="grid">
+      <div><h3>Your Beautiful Smile</h3><p>It lights up everything 💖</p></div>
+      <div><h3>Our Late Night Talks</h3><p>Those endless conversations that go until 3 AM. Every word, every laugh, every silence 🌙</p></div>
+      <div><h3>Your Kindness</h3><p>You care like no one else 🥺</p></div>
+      <div><h3>Your Daily Gossips</h3><p>You Gossips and U 😭 ✨</p></div>
+    </div>
+  </section>
+
+  <!-- LOVE WHEEL -->
+  <section class="wheel">
+    <h2>Love Fortune Wheel 🎡</h2>
+    <canvas id="wheelCanvas" width="400" height="400"></canvas>
+    <button id="spinBtn">💖 Spin for Love</button>
+    <div id="result"></div>
+  </section>
+
+  <!-- PLAYLIST -->
+  <!-- PLAYLIST SECTION -->
+<section class="playlist">
+  <h2> Some Songs For You ♥</h2>
+
+  <div class="playlist-container">
+
+    <!-- Player UI -->
+    <div class="player-ui">
+      <img id="cover" src="assets/images/covers/song1.jpg" class="cover" alt="cover">
+      <h3 id="title">Faasle</h3>
+      <p id="artist">You</p>
+      
+      <audio id="audio"></audio>
+
+      <!-- Controls row -->
+      <div class="controls">
+        <button id="prev">⏮</button>
+        <button id="play">▶️</button>
+        <button id="next">⏭</button>
+      </div>
+
+      <!-- Progress + time -->
+      <div class="progress-container">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="progress" value="0">
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- Spotify-style Song List -->
+    <div class="song-list">
+      <ul id="songList">
+        <li data-src="assets/music/song1.mp3" data-title="Faasle" data-artist="You" data-cover="assets/images/covers/song1.jpg">❤️ Faasle</li>
+        <li data-src="assets/music/song2.mp3" data-title="Maula Mere" data-artist="You" data-cover="assets/images/covers/song2.jpg">💕 Maula Mere</li>
+        <li data-src="assets/music/song3.mp3" data-title="O' Re Piya" data-artist="You" data-cover="assets/images/covers/song3.png">🎶 O' Re Piya</li>
+        <li data-src="assets/music/song4.mp3" data-title="Woh lamhe" data-artist="You" data-cover="assets/images/covers/song4.png">🌙 Woh lamhe</li>
+        <li data-src="assets/music/song5.mp3" data-title="Wishes" data-artist="You" data-cover="assets/images/covers/song5.png">✨ Wishes</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>♥ For My Beautiful Tehreem aka Temi ♥</p>
+    <p>Made with endless love 💕</p>
+  </footer>
+
+  <div id="lightbox"><img id="lightbox-img" src=""></div>
+  <script src="script.js"></script>
+  
+</body>
+</html>

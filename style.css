@@ -1,0 +1,220 @@
+body {margin:0;font-family:Poppins,sans-serif;scroll-behavior:smooth;background:#fdfdff;}
+section {padding:60px 20px;text-align:center;}
+
+/* Hero */
+.hero {height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;color:#fff;
+ background:linear-gradient(135deg,#6a11cb,#ff6ec4,#2575fc);overflow:hidden;}
+.stats{display:flex;gap:40px;margin:20px 0;}
+.btn{padding:12px 30px;border-radius:30px;background:#ff9ecd;color:white;text-decoration:none;}
+
+/* Floating hearts */
+.hearts{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.heart{position:absolute;color:rgba(255,255,255,.9);font-size:20px;animation:floatUp 6s linear infinite;}
+@keyframes floatUp{0%{transform:translateY(100vh) scale(.5);opacity:1}100%{transform:translateY(-10vh) scale(1.2);opacity:0}}
+
+/* Timeline */
+.timeline{position:relative;background:#fafafa;}
+.timeline .line{position:absolute;left:50%;top:0;width:4px;height:100%;background:#ff79c6;}
+.event{width:50%;position:relative;opacity:0;transform:translateY(40px);transition:.8s;margin:2rem 0;}
+.event.show{opacity:1;transform:translateY(0);}
+.event img{width:120px;border-radius:10px;}
+.event .content{background:#fff;padding:20px;border-radius:10px;}
+.event.left{left:0;text-align:right;padding-right:60px;}
+.event.right{left:50%;padding-left:60px;text-align:left;}
+
+/* Gallery */
+.gallery .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
+.gallery img{border-radius:10px;cursor:pointer;transition:.3s;}
+.gallery img:hover{transform:scale(1.05);}
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);justify-content:center;align-items:center;}
+#lightbox img{max-width:90%;max-height:90%;border-radius:10px;}
+/* Gallery Grid */
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.gallery figure:hover img {
+  transform: scale(1.06);
+}
+
+.gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* Lightbox Fullscreen */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Notes */
+.love-notes .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.love-notes div{background:#f7f7ff;padding:20px;border-radius:10px;}
+
+/* Wheel */
+.wheel{background:#fff0f6;padding:40px;}
+#spinBtn{margin-top:15px;padding:12px 25px;background:#ff79c6;color:#fff;border:none;border-radius:20px;cursor:pointer;}
+
+/* Playlist */
+/* 🎧 Spotify Style Playlist */
+.playlist {
+  background: #121212;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.playlist h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #1db954; /* Spotify green 🎵 */
+}
+
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Player UI (cover + controls) */
+.player-ui {
+  max-width: 320px;
+  background: #181818;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+}
+
+.cover {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#title {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+#artist {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+/* Controls row */
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+.controls button:hover { color: #1db954; transform: scale(1.2); }
+
+/* Progress bar */
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#progress {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 5px;
+  background: #444;
+  cursor: pointer;
+}
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #1db954;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+}
+
+/* Song List (Spotify look) */
+.song-list {
+  max-width: 300px;
+  background: #181818;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.song-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-list li {
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background: #202020;
+  color: #ddd;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.song-list li:hover {
+  background: #2a2a2a;
+  color: white;
+}
+
+.song-list li.active {
+  background: #1db954;
+  color: white;
+  font-weight: bold;
+}
